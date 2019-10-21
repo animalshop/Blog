@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    
+    <title>博客管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+    <!-- 下面需要引用SemanticUI的前端框架 -->
+    <!-- 第一步导航 -->
+    <!-- 其中inverted是反转，原本白色现在黑色，segment是片段 attach依附没有圆角 -->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+                <!-- stackable代表可堆叠的适应于手机端 -->
+                <div class="ui inverted secondary stackable menu">
+                        <!-- h2是logo -->
+                        <h2 class="ui teal header item">博客管理</h2>
+                        <a href="../index.html" class="m-item item m-mobile-hide"><i class=" home icon"></i>博客</a>
+                        <a href="../types.html" class="m-item active item m-mobile-hide"><i class=" idea icon"></i>分类</a>
+                        <a href="../tags.html" class="m-item item m-mobile-hide"><i class=" tags icon"></i>标签</a>
+                        <div class="right menu">
+                            <div class="ui item">
+                                <div class="ui dropdown m-item item m-mobile-hide item">
+                                    <div class="text">
+                                        <img src="../static/images/avatar.png" alt="" class="ui avatar image">wuyan
+                                    </div>
+                                     <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <a href="#" class="item">注销</a>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>  
+                    </div>    
+
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item">发布</a>
+                <a href="#" class="item teal active">列表</a>
+            </div>
+        </div>
+        
+    </div>
+    <!-- 主体部分 -->
+    <div class="m-container m-padded-tb-massive m-container-small">
+        <div class="ui container">
+            <form action="#" method="POST" class="ui form segment">
+                <!-- inline一个小格子的效果，而不是一行 -->
+                <div class="ui inline fields">
+                    <div class="field">
+                        <input type="text" name="title" placeholder="标题">
+                    </div>
+                    <div class="field">
+                         <div class="ui selection dropdown">
+                             <input type="hidden" name="type" placeholder="类型">
+                             <i class="dropdown icon"></i>
+                             <div class="default text">分类</div>
+                             <div class="menu">
+                                 <!-- 其中data-value是真正要传入后端的值 -->
+                                <div class="item" data-value="1">错误日志</div>
+                                <div class="item" data-value="2">开发者手册</div>
+                             </div>
+                         </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">推荐</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+                    </div>
+                </div>
+            </form>  
+            <!-- celled是给表格加上网格 -->
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>标题</th>
+                        <th>类型</th>
+                        <th>推荐</th>
+                        <th>更新时间</th>
+                        <th>操作</th>    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>JAVA线程问题</td>
+                        <td>认知升级</td>
+                        <td>是</td>
+                        <td>2019/09/12 21:55</td>
+                        <td>
+                            <a href="#" class="ui mini teal basic  button">编辑</a>
+                            <a href="#" class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui mini pagination menu">
+                                <a href="#" class="item">上一页</a>
+                                <!-- <a href="#" class="item">1</a>
+                                <a href="#" class="item">2</a>
+                                <a href="#" class="item">3</a>
+                                <a href="#" class="item">4</a> -->
+                                <a href="#" class="item">下一页</a>
+                            </div>
+                            <a href="#" class="ui right floated teal basic mini button">新增</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>              
+                           
+    </div>
+    <br>
+    <br>
+    <!-- 底部footer -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <!-- 将一行分成16分而bootstrap将一行分成12份 -->
+            <div class="ui inverted divided grid">
+                <div class="three wide  column">
+                    <img src="../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 100px;">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事(User Story)</a>
+                        <a href="#" class="item">关于可以练习的清单</a>
+                        <a href="#" class="item">失败要乘早</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                        <h4 class="ui inverted header">联系我</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Emial:2958472097@qq.com</a>
+                            <a href="#" class="item">QQ:2958472097</a>
+                        </div>
+                </div>
+                <div class="seven wide column">
+                        <h4 class="ui inverted header">Introduction</h4>
+                        <p class="m-opacity-meddle">这是我的个人博客在这里我主要会分享一些关于编程，写作，思考的相关内容，希望可以给看到博客的人带来帮助</p>
+                </div>
+            </div>
+            <!-- 下面是分割线 -->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-meddle">Copyright @ 2019 - 2020  wuyan Designed  the blog</p>
+        </div>
+    </footer>
+
+    <!-- <script type="application/javascript" src="static/js/jquery-1.11.1.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        // 通过jQuery拿到右上角的Button按钮的id
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+        $('.ui.dropdown')
+        .dropdown();
+    </script>
+</body>
+</html>

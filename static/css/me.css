@@ -1,0 +1,148 @@
+/* 背景图片 */
+body{
+    background: url("../images/bg.png");
+}
+/* 字体透明度 */
+.m-opacity-mini{
+    opacity: 0.8 !important;
+}
+.m-opacity-meddle{
+    opacity: 0.6 !important;
+}
+.m-opacity-massive{
+    opacity: 0.4 !important;
+}
+
+/* 定义外部间距margin */
+.m-margin-tb-mini{
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+.m-margin-tb-tiny{
+    margin-top: 0.4em !important;
+    margin-bottom: 0.4em !important;
+}
+.m-margin-top-samll{
+    margin-top: 0.5em !important;
+}
+.m-margin-top-large{
+    margin-top: 1.5em !important;
+}
+.m-padded-mini{
+    padding: 0.3em !important;
+}
+.m-padded-tb-mini {
+/* 一个em就是14个像素 */
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+.m-padded-tb-massive{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+.m-padded-tb-large{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.m-padded-tb-huge{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.m-padded-tb{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-small{
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.m-padded-lr{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+/* m-shadow-small给导航加阴影 */
+.m-shadow-small{
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+
+
+/* display------------- */
+.m-inline-block{
+    display: inline-block;
+}
+.m-text{
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
+/* 设置字体 */
+.m-text-thin{
+    font-weight: 300 !important;
+}
+/* 字体颜色 */
+.m-black{
+    color: #333 !important;
+}
+/* 字间距 */
+.m-text-spaced{
+    letter-spacing: 1px !important;
+}
+/* 行间距 */
+.m-text-line{
+    line-height: 1.8;
+}
+/* index页面内容宽度 */
+.m-container{
+    max-width: 72em !important;
+    margin: auto !important;
+}
+/* 文章详情页面内容宽度 */
+.m-container-small{
+    max-width: 60em !important;
+    margin: auto !important;
+}
+/* w位置 */
+.m-top-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* 详情页的两个按钮和输入框之间的间距调整在mobile时 */
+.m-margin-bottom-mini{
+    margin-bottom: 0.5em !important;
+}
+/* 平常的时候这个右上角的按钮是隐藏的 */
+.m-mobile-show{
+    display: none !important;
+}
+/* 手机端隐藏 媒体查询*/
+@media screen and (max-width:768px) {
+    .m-mobile-hide{
+        display: none !important;
+    }
+    /* 在手机端又显示出来 */
+    .m-mobile-show{
+        display: block !important;
+    }
+    .m-padded-lr{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .m-mobile-lr-clear{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    /* 让按钮充满 */
+    .m-mobile-wide{
+        width: 100% !important;
+    }
+}
